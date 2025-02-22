@@ -21,11 +21,13 @@ An open-source Office 365 email backup solution that allows users to securely ba
 
 ### Frontend
 - [React](https://react.dev/) - JavaScript library for building user interfaces.
-- [Vite](https://vitejs.dev/) - Fast build tool for modern frontends.
+- [Next](https://nextjs.org/) - NextJS by Vercel.
+- [TailwindCSS](https://tailwindcss.org) - Tailwind CSS
+- [ShadcnUI](https://ui.shadcn.com) - Shadcn UI
 - [TypeScript](https://www.typescriptlang.org/) - Strongly typed JavaScript.
 
 ### Storage
-- [AWS S3](https://aws.amazon.com/s3/) - Secure cloud storage for email backups.
+- Driver system for storage, which allows to plug any cloud/ftp storage solutions.
 
 ## Installation & Setup
 
@@ -33,7 +35,6 @@ An open-source Office 365 email backup solution that allows users to securely ba
 - Node.js 18+
 - MongoDB (local or cloud instance)
 - Redis
-- AWS S3 account
 
 ### Backend Setup
 ```sh
@@ -41,6 +42,7 @@ git clone https://github.com/bcodesoftware/storix.git
 cd backend
 npm install
 cp .env.example .env # Update environment variables
+npm run migrations:permissions # Basic roles and permissions to start
 npm run start:dev
 ```
 
@@ -90,7 +92,8 @@ We welcome contributions! Please follow these steps:
 This project is licensed under the [MIT License](LICENSE).
 
 ## Roadmap
-- ✅ Email Backup & Restore
+- 🔲 Email Backup & Restore for Office 365
+- 🔲 File system drivers
 - 🔲 Multi-Tenancy Support
 - 🔲 Google Workspace Email Backup
 - 🔲 Admin Dashboard for Monitoring
